@@ -1,0 +1,15 @@
+streamlit
+pandas
+selenium
+numpy
+plotly
+geocoder
+pymysql
+geopy
+pdfminer.six
+streamlit-tags
+pillow
+nltk
+spacy
+scikit-learn
+reportlab
