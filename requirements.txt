@@ -11,3 +11,4 @@ geocoder
 geopy
 pymysql
 streamlit-tags
+spacy
