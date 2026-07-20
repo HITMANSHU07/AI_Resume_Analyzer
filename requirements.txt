@@ -4,7 +4,3 @@ numpy
 plotly
 reportlab
 pdfminer.six
-pillow
-nltk
-scikit-learn
-spacy==3.7.2
