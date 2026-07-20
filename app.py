@@ -340,8 +340,30 @@ def get_resume_score_breakdown(resume_data):
         "Education": 0,
         "Skills": 0,
         "Experience": 0,
-        "Formatting": 8,
-        "Keywords": 7
+        "Formatting": 10,
+        "Keywords": 10
+    }
+    
+    if resume_data.get('name'):
+        score_breakdown["Contact Information"] += 10
+    if resume_data.get('email'):
+        score_breakdown["Contact Information"] += 5
+    if resume_data.get('mobile_number'):
+        score_breakdown["Contact Information"] += 5
+
+    skills = resume_data.get('skills', [])
+    if skills:
+        score_breakdown["Skills"] = min(len(skills) * 3, 30)
+
+    resume_text = str(resume_data.get('total_text', '')).lower()
+    
+    if any(word in resume_text for word in ['education', 'b.tech', 'degree', 'university', 'college']):
+        score_breakdown["Education"] = 15
+        
+    if any(word in resume_text for word in ['experience', 'project', 'internship', 'worked', 'developed']):
+        score_breakdown["Experience"] = 15
+
+    return score_breakdown
     }
     if resume_data.get('name'): score_breakdown["Contact Information"] += 3
     if resume_data.get('email'): score_breakdown["Contact Information"] += 3
