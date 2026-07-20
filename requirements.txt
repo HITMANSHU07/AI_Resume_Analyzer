@@ -10,3 +10,4 @@ scikit-learn
 geocoder
 geopy
 pymysql
+streamlit-tags
