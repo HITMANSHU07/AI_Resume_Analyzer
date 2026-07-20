@@ -364,7 +364,7 @@ def get_resume_score_breakdown(resume_data):
         score_breakdown["Experience"] = 15
 
     return score_breakdown
-    }
+
     if resume_data.get('name'): score_breakdown["Contact Information"] += 3
     if resume_data.get('email'): score_breakdown["Contact Information"] += 3
     if resume_data.get('mobile_number'): score_breakdown["Contact Information"] += 4
